@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-movies": {
+    "AngularMovies": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-movies",
+            "outputPath": "dist/AngularMovies",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-movies:build"
+            "browserTarget": "AngularMovies:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-movies:build:production"
+              "browserTarget": "AngularMovies:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-movies:build"
+            "browserTarget": "AngularMovies:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-movies:serve"
+            "devServerTarget": "AngularMovies:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-movies:serve:production"
+              "devServerTarget": "AngularMovies:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "angular-movies"
+  "defaultProject": "AngularMovies"
 }
