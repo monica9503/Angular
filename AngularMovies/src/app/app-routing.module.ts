@@ -9,17 +9,12 @@ const routes: Routes = [];
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      {path: 'login', component: LoginComponent},
+      { path: 'login', component: LoginComponent },
       { path: '', redirectTo: 'login', pathMatch: 'full' },
-      //{path: 'movies', component: MoviesComponent},
     {
       path: 'movies',
       canActivate: [AuthGuard],
       component: MoviesComponent
-      // loadChildren: () =>
-      // import('./movies/movies.module').then(
-      //   (m) => m.MoviesModule
-      // ),
     }
    ], {})
   ],
