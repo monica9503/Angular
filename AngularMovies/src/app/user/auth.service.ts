@@ -4,20 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  loginCheck(userName: any, password: any) {
-    throw new Error('Method not implemented.');
-  }
-  currentUser: Boolean;
   users: any = [];
   redirectUrl: string;
 
 
   get isLoggedIn(): boolean {
-    return !!this.currentUser;
+    return !!localStorage.getItem('loginStatus');
   }
 
-  set loggedInStatus(status: boolean){
-      this.currentUser = status 
+  set loggedInStatus(status: string){
+      localStorage.setItem('loginStatus', status);
   }
 
   constructor() { }

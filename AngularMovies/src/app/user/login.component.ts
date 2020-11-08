@@ -51,7 +51,7 @@ export class LoginComponent {
         this.currentUser = true
         if (this.users.length > 0) {
             this.errorFlag = false;
-            this.authService.loggedInStatus = true;
+            this.authService.loggedInStatus = 'true';
             this.router.navigate(['/movies']);
         } else {
           debugger
