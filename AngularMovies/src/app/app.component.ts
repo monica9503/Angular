@@ -15,4 +15,9 @@ export class AppComponent {
   ngOnInit(){
     this.router.navigateByUrl('/login');
   }
+
+  logout() {
+    localStorage.clear();
+    this.router.navigateByUrl('/login');
+  }
 }

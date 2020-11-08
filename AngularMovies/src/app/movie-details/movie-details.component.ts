@@ -15,6 +15,9 @@ export class MovieDetailsComponent implements OnInit {
   movieID: string;
   ratingFlag = true;
   commentFlag = true;
+  userRating: any;
+  userComment: any;
+  userId: any;
 
   constructor(private route: ActivatedRoute, private movieService: MovieService) { }
 
@@ -23,6 +26,8 @@ export class MovieDetailsComponent implements OnInit {
       debugger
       this.movieID = params.get("id")
       this.movieInfo = this.movieService.getMovieSpecificInfo(parseInt(this.movieID));
+      this.userId = localStorage.getItem("userId");
+      this.userRating = this.movieInfo.userRating[this.userId]
     })
 
   }

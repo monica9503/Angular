@@ -3,6 +3,6 @@ export interface Movie {
     title: string;
     description: string;
     avgRating: number;
-    userRating: [];
-    userComments: [];
+    userRating: {};
+    userComments: {};
   }
