@@ -8,7 +8,7 @@ import { Movie } from "../movies/movie";
           description: 'Leaf rake with 48-inch wooden handle',
           avgRating: 19.95,
           userRating: {1000 :'3.0', 1001: '2.0'},
-          userComments: {}
+          userComments: {1000: 'good'}
         },
         {
             id: 2,

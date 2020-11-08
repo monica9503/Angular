@@ -23,13 +23,12 @@ export class MovieDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      debugger
-      this.movieID = params.get("id")
+      this.movieID = params.get("id");
       this.movieInfo = this.movieService.getMovieSpecificInfo(parseInt(this.movieID));
-      this.userId = localStorage.getItem("userId");
-      this.userRating = this.movieInfo.userRating[this.userId]
+      this.userId = parseInt(localStorage.getItem("userId"));
+      this.userRating = this.movieInfo.userRating[this.userId];
+      this.userComment = this.movieInfo.userComments[this.userId];
     })
-
   }
 
   editRating(movie: Movie) {

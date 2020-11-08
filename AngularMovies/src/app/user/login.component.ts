@@ -22,9 +22,7 @@ export class LoginComponent {
             
   
   ngOnInit() {
-    debugger
     if(this.authService.isLoggedIn) {
-      debugger
       this.router.navigate(['/movies']);
     }
   } 
@@ -44,7 +42,6 @@ export class LoginComponent {
     if (!userName || !password) {
       return;
     } else {
-      debugger
       this.httpClient.get("assets/users.json").subscribe(data =>{
         this.users = data;
         this.users = this.users.filter(x => x.userName === userName && x.password === password)
@@ -52,10 +49,9 @@ export class LoginComponent {
         if (this.users.length > 0) {
             this.errorFlag = false;
             this.authService.loggedInStatus = 'true';
-            localStorage.setItem("userId", this.users.userId)
+            localStorage.setItem("userId", this.users[0].userId)
             this.router.navigate(['/movies']);
         } else {
-          debugger
           this.errorFlag = true;
           this.errorMessage = 'Incorrect username or password.';
         }

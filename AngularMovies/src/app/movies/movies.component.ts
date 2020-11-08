@@ -18,8 +18,6 @@ export class MoviesComponent implements OnInit {
   }
 
   movieDetails(movie: Movie) {
-    debugger;
-    console.log(movie);
     this.router.navigate(['/movie/details/' + movie.id]);
   }
 }
