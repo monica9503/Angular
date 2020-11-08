@@ -46,6 +46,10 @@ import { Movie } from "../movies/movie";
         getMovies() {
             return this.movies
         }
+
+        getMovieInfo(id: number) {
+            return this.movies.slice().filter(m => m.id = id)[0];
+        }
  }
  
  
