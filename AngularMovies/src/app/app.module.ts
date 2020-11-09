@@ -10,6 +10,7 @@ import { MoviesModule } from './movies/movies.module';
 import { MovieService } from './movies/movie.service';
 import { MovieData } from './data/movie-data';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     UserModule,
     HttpClientModule,
     MoviesModule,
+    FormsModule
   ],
   providers: [MovieService, MovieData],
   bootstrap: [AppComponent]

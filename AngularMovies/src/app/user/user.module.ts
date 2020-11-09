@@ -12,7 +12,7 @@ import { SharedModule } from '../shared/shared.module';
     ])
   ],
   declarations: [
-    LoginComponent
+    LoginComponent,
   ]
 })
 export class UserModule { }

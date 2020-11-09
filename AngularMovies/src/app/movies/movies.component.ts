@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 
 export class MoviesComponent implements OnInit {
   moviesData: Movie[]
+  
   constructor(private movieService: MovieService, private router: Router) { }
 
   ngOnInit(): void {

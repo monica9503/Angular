@@ -22,4 +22,9 @@ export class MovieService {
     getMovieSpecificInfo(id: number) {
       return this.movieData.getMovieInfo(id)
     }
+
+    updateUserRating(movieId: number, userId: number, newRating: number) {
+      debugger
+      this.movieData.updateUserRating(movieId, userId, newRating);
+    }
 }

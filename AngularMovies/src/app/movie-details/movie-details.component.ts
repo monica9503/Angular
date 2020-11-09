@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 import { ActivatedRoute } from "@angular/router";
 import { Movie } from '../movies/movie';
 import { MovieService } from '../movies/movie.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-details',
@@ -19,7 +21,7 @@ export class MovieDetailsComponent implements OnInit {
   userComment: any;
   userId: any;
 
-  constructor(private route: ActivatedRoute, private movieService: MovieService) { }
+  constructor(private route: ActivatedRoute, private movieService: MovieService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -31,16 +33,24 @@ export class MovieDetailsComponent implements OnInit {
     })
   }
 
-  editRating(movie: Movie) {
+  editRating() {
     this.ratingFlag = false;
   }
 
 
-  editComment(movie: Movie) {
+  editComment() {
     this.commentFlag = false;
   }
 
-  save() {
+  save(detailsForm: NgForm) : void {
+    debugger;
+    
+    console.log(detailsForm.controls.moviedes.value)
+    console.log(detailsForm.controls.movieid.value)
+    console.log(detailsForm.controls.movierating.value)
+    console.log(detailsForm.controls.userrating.value)
+    this.movieService.updateUserRating(parseInt(this.movieID), this.userId, detailsForm.controls.userrating.value);
+    this.router.navigate(['/movies']);
   }
 
   cancel(){
