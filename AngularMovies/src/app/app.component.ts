@@ -20,4 +20,8 @@ export class AppComponent {
     localStorage.clear();
     this.router.navigateByUrl('/login');
   }
+
+  home() {
+    this.router.navigateByUrl('/movies');
+  }
 }

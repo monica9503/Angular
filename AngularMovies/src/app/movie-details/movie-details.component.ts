@@ -31,7 +31,6 @@ export class MovieDetailsComponent implements OnInit {
       const movieInfo = this.movieService.getMovieInfo(parseInt(this.movieID));
 
       forkJoin([movieGenericDetail, movieInfo]).subscribe(result => {
-        debugger;
         this.movieInfo = result[0];
         this.userRating = (result[1][0] !== undefined) ? result[1][0].rating: 0.0;
         this.userComment =  (result[1][0] !== undefined) ? result[1][0].comment: "N/A";
@@ -44,7 +43,6 @@ export class MovieDetailsComponent implements OnInit {
     this.ratingFlag = false;
   }
 
-
   editComment() {
     this.commentFlag = false;
   }
@@ -55,7 +53,7 @@ export class MovieDetailsComponent implements OnInit {
     const userId = parseInt(localStorage.getItem("userId"));
     const rating = detailsForm.controls.userrating.value;
     const comment = detailsForm.controls.usercomment.value;
-  
+
     const dataInput = {"id": movieInfoId, "movieId": movieId, "userId": userId, "rating": rating, "comment": comment}
 
     this.movieService.updateMovieInfo(movieInfoId, dataInput).subscribe(data => {
