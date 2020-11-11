@@ -39,7 +39,7 @@ export class MovieDetailsComponent implements OnInit {
         const userId = parseInt(localStorage.getItem("userId"));
         if(result[1][0] === undefined) {
           console.log("not found...");
-          const dataInput = {"movieId": parseInt(this.movieID), "userId": userId, "rating": "", "comment": ""}
+          const dataInput = {"movieId": parseInt(this.movieID), "userId": userId, "rating": 0, "comment": ""}
           this.movieService.addMovieInfo(dataInput).subscribe();
         } else {
           this.userRating = (result[1][0] !== undefined) ? result[1][0].rating: 0.0;
@@ -65,7 +65,7 @@ export class MovieDetailsComponent implements OnInit {
     const rating = detailsForm.controls.userrating.value;
     const comment = detailsForm.controls.usercomment.value;
 
-    const dataInput = {"id": movieInfoId, "movieId": movieId, "userId": userId, "rating": rating, "comment": comment}
+    const dataInput = {"id": movieInfoId, "movieId": movieId, "userId": userId, "rating": parseInt(rating), "comment": comment}
 
     this.movieService.updateMovieInfo(movieInfoId, dataInput).subscribe(data => {
       this.router.navigate(['/movies']);
