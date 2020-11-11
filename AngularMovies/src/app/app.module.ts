@@ -9,7 +9,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { MoviesModule } from './movies/movies.module';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { FormsModule } from '@angular/forms';
-import {MovieDBService} from '../app/movies/moviedb.service'
+import {MovieDBService} from './movies/moviedb.service'
 import {ApiService} from '../app/services/api.service'
 
 @NgModule({

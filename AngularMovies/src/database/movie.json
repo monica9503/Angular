@@ -40,18 +40,23 @@
       "comment": "very good"
     },
     {
-      "id": 501,
-      "userId": 1000,
-      "movieId": 2,
-      "rating": 3.3,
-      "comment": "good"
+      "data": {
+        "dataInput": {
+          "id": 501,
+          "movieId": "2",
+          "userId": 1000,
+          "rating": "1",
+          "comment": "bad bad"
+        }
+      },
+      "id": 501
     },
     {
       "id": 502,
-      "userId": 1001,
-      "movieId": 3,
-      "rating": 5,
-      "comment": "bad"
+      "movieId": "2",
+      "userId": 1000,
+      "rating": "3.12",
+      "comment": "very goog"
     }
   ]
 }

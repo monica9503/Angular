@@ -33,8 +33,9 @@ export class MovieDetailsComponent implements OnInit {
       forkJoin([movieGenericDetail, movieInfo]).subscribe(result => {
         debugger;
         this.movieInfo = result[0];
-        this.userRating = result[1][0].rating;
-        this.userComment = result[1][0].comment;
+        this.userRating = (result[1][0] !== undefined) ? result[1][0].rating: 0.0;
+        this.userComment =  (result[1][0] !== undefined) ? result[1][0].comment: "N/A";
+        localStorage.setItem("movieInfoID", result[1][0].id);
       })
     })
   }
@@ -49,12 +50,17 @@ export class MovieDetailsComponent implements OnInit {
   }
 
   save(detailsForm: NgForm) : void {    
-    // console.log(detailsForm.controls.moviedes.value)
-    // console.log(detailsForm.controls.movieid.value)
-    // console.log(detailsForm.controls.movierating.value)
-    // console.log(detailsForm.controls.userrating.value)
-    // this.movieService.updateUserRating(parseInt(this.movieID), this.userId, detailsForm.controls.userrating.value);
-    // this.router.navigate(['/movies']);
+    const movieId = detailsForm.controls.movieid.value;
+    const movieInfoId = parseInt(localStorage.getItem("movieInfoID"));
+    const userId = parseInt(localStorage.getItem("userId"));
+    const rating = detailsForm.controls.userrating.value;
+    const comment = detailsForm.controls.usercomment.value;
+  
+    const dataInput = {"id": movieInfoId, "movieId": movieId, "userId": userId, "rating": rating, "comment": comment}
+
+    this.movieService.updateMovieInfo(movieInfoId, dataInput).subscribe(data => {
+      this.router.navigate(['/movies']);
+    })
   }
 
   cancel(){

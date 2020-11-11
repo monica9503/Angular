@@ -23,4 +23,9 @@ export class MovieDBService extends ApiService {
         const currURL = this.url + 'movies/' + movieID+ '/movieinfo' 
         return this.http.get<any>(currURL)
     }    
+
+    updateMovieInfo(movieInfoId: number, data: any) {
+        const currURL = this.url + 'movieinfo/' + movieInfoId;
+        return this.http.put<any>(currURL, data);
+    }
 }
