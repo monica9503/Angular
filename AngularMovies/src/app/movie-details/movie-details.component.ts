@@ -25,16 +25,23 @@ export class MovieDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private movieService: MovieDBService, private router: Router) { }
 
   ngOnInit(): void {
+    debugger
     this.route.paramMap.subscribe(params => {
+      debugger
       this.movieID = params.get("id");
       const movieGenericDetail = this.movieService.getMovieSpecific(parseInt(this.movieID));
       const movieInfo = this.movieService.getMovieInfo(parseInt(this.movieID));
-
+      debugger
       forkJoin([movieGenericDetail, movieInfo]).subscribe(result => {
+        debugger
         this.movieInfo = result[0];
-        this.userRating = (result[1][0] !== undefined) ? result[1][0].rating: 0.0;
-        this.userComment =  (result[1][0] !== undefined) ? result[1][0].comment: "N/A";
-        localStorage.setItem("movieInfoID", result[1][0].id);
+        if(result[1][0] === undefined) {
+          console.log("not found...");
+        } else {
+          this.userRating = (result[1][0] !== undefined) ? result[1][0].rating: 0.0;
+          this.userComment =  (result[1][0] !== undefined) ? result[1][0].comment: "N/A";
+          localStorage.setItem("movieInfoID", result[1][0].id);
+        }
       })
     })
   }
