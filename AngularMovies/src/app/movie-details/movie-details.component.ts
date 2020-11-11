@@ -31,12 +31,16 @@ export class MovieDetailsComponent implements OnInit {
       this.movieID = params.get("id");
       const movieGenericDetail = this.movieService.getMovieSpecific(parseInt(this.movieID));
       const movieInfo = this.movieService.getMovieInfo(parseInt(this.movieID));
+
       debugger
       forkJoin([movieGenericDetail, movieInfo]).subscribe(result => {
         debugger
         this.movieInfo = result[0];
+        const userId = parseInt(localStorage.getItem("userId"));
         if(result[1][0] === undefined) {
           console.log("not found...");
+          const dataInput = {"movieId": parseInt(this.movieID), "userId": userId, "rating": "", "comment": ""}
+          this.movieService.addMovieInfo(dataInput).subscribe();
         } else {
           this.userRating = (result[1][0] !== undefined) ? result[1][0].rating: 0.0;
           this.userComment =  (result[1][0] !== undefined) ? result[1][0].comment: "N/A";

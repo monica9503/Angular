@@ -52,6 +52,13 @@
       "userId": 1000,
       "rating": "2.3",
       "comment": "N/A"
+    },
+    {
+      "movieId": "4",
+      "userId": 1000,
+      "rating": "",
+      "comment": "",
+      "id": 503
     }
   ]
 }
