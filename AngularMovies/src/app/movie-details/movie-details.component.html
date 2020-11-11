@@ -6,7 +6,7 @@
     <div class="card-body"> 
         <form novalidate (ngSubmit)="save(detailsForm)" #detailsForm="ngForm" autocomplete="off">
 
-            <fieldset>
+            <fieldset *ngIf="movieInfo" >
                 <div class="form-group row">
                   <label class="col-md-2 col-form-label"
                          for="movieID">Movie ID: </label>

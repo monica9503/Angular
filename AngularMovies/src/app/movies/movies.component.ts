@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from '../movies/movie.service'
+import { MovieDBService } from '../movies/moviedb.service'
 import { Movie } from './movie';
 import { Router } from '@angular/router';
 
@@ -12,10 +12,12 @@ import { Router } from '@angular/router';
 export class MoviesComponent implements OnInit {
   moviesData: Movie[]
   
-  constructor(private movieService: MovieService, private router: Router) { }
+  constructor(private router: Router, private movieDBService: MovieDBService) { }
 
   ngOnInit(): void {
-    this.moviesData = this.movieService.getMovieDetails()
+   this.movieDBService.getMovies().subscribe(data => {
+    this.moviesData = data;
+   })
   }
 
   movieDetails(movie: Movie) {

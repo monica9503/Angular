@@ -1,0 +1,57 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Leaf Rake",
+      "description": "Leaf rake with 48-inch wooden handle",
+      "avgRating": 17
+    },
+    {
+      "id": 2,
+      "title": "Inception",
+      "description": "Leaf rake with 48-inch wooden handle",
+      "avgRating": 5
+    },
+    {
+      "id": 3,
+      "title": "JHarry potter",
+      "description": "Leaf rake with 48-inch wooden handle",
+      "avgRating": 15
+    },
+    {
+      "id": 4,
+      "title": "Game of thrones",
+      "description": "Leaf rake with 48-inch wooden handle",
+      "avgRating": 19.95
+    },
+    {
+      "id": 5,
+      "title": "River dale",
+      "description": "Leaf rake with 48-inch wooden handle",
+      "avgRating": 12
+    }
+  ],
+  "movieinfo": [
+    {
+      "id": 500,
+      "movieId": 1,
+      "rating": 3.2,
+      "userId": 1000,
+      "comment": "very good"
+    },
+    {
+      "id": 501,
+      "userId": 1000,
+      "movieId": 2,
+      "rating": 3.3,
+      "comment": "good"
+    },
+    {
+      "id": 502,
+      "userId": 1001,
+      "movieId": 3,
+      "rating": 5,
+      "comment": "bad"
+    }
+  ]
+}

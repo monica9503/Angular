@@ -1,0 +1,20 @@
+[
+    {
+        "userId": 1000,
+        "userName": "monica",
+        "isAdmin": false,
+        "password": "cy3"
+    },
+    {
+        "userId": 1001,
+        "userName": "chandni",
+        "isAdmin": true,
+        "password": "qqqq"
+    },
+    {
+        "userId": 1002,
+        "userName": "xyz",
+        "isAdmin": false,
+        "password": "aaa"
+    }
+]

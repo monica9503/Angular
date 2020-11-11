@@ -3,8 +3,9 @@ import { NgForm } from '@angular/forms';
 
 import { ActivatedRoute } from "@angular/router";
 import { Movie } from '../movies/movie';
-import { MovieService } from '../movies/movie.service';
 import { Router } from '@angular/router';
+import { MovieDBService } from '../movies/moviedb.service';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-movie-details',
@@ -21,15 +22,20 @@ export class MovieDetailsComponent implements OnInit {
   userComment: any;
   userId: any;
 
-  constructor(private route: ActivatedRoute, private movieService: MovieService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private movieService: MovieDBService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.movieID = params.get("id");
-      this.movieInfo = this.movieService.getMovieSpecificInfo(parseInt(this.movieID));
-      this.userId = parseInt(localStorage.getItem("userId"));
-      this.userRating = this.movieInfo.userRating[this.userId];
-      this.userComment = this.movieInfo.userComments[this.userId];
+      const movieGenericDetail = this.movieService.getMovieSpecific(parseInt(this.movieID));
+      const movieInfo = this.movieService.getMovieInfo(parseInt(this.movieID));
+
+      forkJoin([movieGenericDetail, movieInfo]).subscribe(result => {
+        debugger;
+        this.movieInfo = result[0];
+        this.userRating = result[1][0].rating;
+        this.userComment = result[1][0].comment;
+      })
     })
   }
 
@@ -42,15 +48,13 @@ export class MovieDetailsComponent implements OnInit {
     this.commentFlag = false;
   }
 
-  save(detailsForm: NgForm) : void {
-    debugger;
-    
-    console.log(detailsForm.controls.moviedes.value)
-    console.log(detailsForm.controls.movieid.value)
-    console.log(detailsForm.controls.movierating.value)
-    console.log(detailsForm.controls.userrating.value)
-    this.movieService.updateUserRating(parseInt(this.movieID), this.userId, detailsForm.controls.userrating.value);
-    this.router.navigate(['/movies']);
+  save(detailsForm: NgForm) : void {    
+    // console.log(detailsForm.controls.moviedes.value)
+    // console.log(detailsForm.controls.movieid.value)
+    // console.log(detailsForm.controls.movierating.value)
+    // console.log(detailsForm.controls.userrating.value)
+    // this.movieService.updateUserRating(parseInt(this.movieID), this.userId, detailsForm.controls.userrating.value);
+    // this.router.navigate(['/movies']);
   }
 
   cancel(){
