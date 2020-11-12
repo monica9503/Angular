@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="card-header">
+        Movie details
+    </div>
+  
+    <div class="card-body"> 
+        <form novalidate (ngSubmit)="save(detailsForm)" #detailsForm="ngForm" autocomplete="off">
+
+            <fieldset>
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label"
+                           for="movieTitle">Movie Title: </label>
+                    <input [disabled]="true" type="text" class="form-control col-md-8" id="movieTitle" ngModel="" #movieTitle="ngModel" value="" name="movietitle"/>
+                  </div>
+
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label"
+                           for="desc">Movie Description: </label>
+                    <input [disabled]="true" type="text" class="form-control col-md-8" id="movieDesc" ngModel="" #movieDesc="ngModel" value="" name="moviedes"/>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-md-2 col-form-label"
+                           for="avgRating">Average Rating: </label>
+                    <input [disabled]="true" type="text" class="form-control col-md-8" id="movieRat" ngModel="" #movieRat="ngModel" value="" name="movierating" />
+                </div>
+
+                <div class="form-group row">
+                    <button class="btn btn-primary" type="submit">save</button>
+                    <button class="btn btn-primary ml-2" (click)="cancel()">cancel</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

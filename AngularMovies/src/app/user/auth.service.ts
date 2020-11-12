@@ -12,6 +12,10 @@ export class AuthService {
     return !!localStorage.getItem('loginStatus');
   }
 
+  get isAdmin(): boolean {
+    return localStorage.getItem('isAdmin') === "true";
+  }
+
   set loggedInStatus(status: string){
       localStorage.setItem('loginStatus', status);
   }

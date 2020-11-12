@@ -11,14 +11,18 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { FormsModule } from '@angular/forms';
 import {MovieDBService} from './movies/moviedb.service'
 import {ApiService} from '../app/services/api.service';
-import { FilterPipe } from './filter.pipe'
+import { FilterPipe } from './filter.pipe';
+import { AdminComponent } from './admin/admin.component';
+import { AddMovieComponent } from './add-movie/add-movie.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     MoviesComponent,
     MovieDetailsComponent,
-    FilterPipe
+    FilterPipe,
+    AdminComponent,
+    AddMovieComponent
   ],
   imports: [
     BrowserModule,

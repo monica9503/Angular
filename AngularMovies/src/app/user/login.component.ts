@@ -48,6 +48,7 @@ export class LoginComponent {
             this.errorFlag = false;
             this.authService.loggedInStatus = 'true';
             localStorage.setItem("userId", this.users[0].userId)
+            localStorage.setItem("isAdmin", this.users[0].isAdmin);
             this.router.navigate(['/movies']);
         } else {
           this.errorFlag = true;

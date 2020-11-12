@@ -5,30 +5,24 @@
       "title": "Leaf Rake",
       "description": "Leaf rake with 48-inch wooden handle",
       "avgRating": 17
-    },
+    } ,
     {
       "id": 2,
       "title": "Inception",
       "description": "Leaf rake with 48-inch wooden handle",
-      "avgRating": 5
+      "avgRating": 7
     },
     {
       "id": 3,
-      "title": "JHarry potter",
+      "title": "Spider man",
       "description": "Leaf rake with 48-inch wooden handle",
-      "avgRating": 15
+      "avgRating": 5
     },
     {
       "id": 4,
-      "title": "Game of thrones",
-      "description": "Leaf rake with 48-inch wooden handle",
-      "avgRating": 19.95
-    },
-    {
-      "id": 5,
-      "title": "River dale",
-      "description": "Leaf rake with 48-inch wooden handle",
-      "avgRating": 12
+      "title": "Dark knight",
+      "description": "Dark knight rises",
+      "avgRating": 10
     }
   ],
   "movieinfo": [
@@ -41,31 +35,10 @@
     },
     {
       "id": 501,
-      "userId": 1000,
       "movieId": 2,
-      "rating": 3.3,
-      "comment": "good"
-    },
-    {
-      "id": 502,
-      "movieId": 3,
+      "rating": 4.2,
       "userId": 1000,
-      "rating": "2.3",
-      "comment": "N/A"
-    },
-    {
-      "movieId": "4",
-      "userId": 1000,
-      "rating": "",
-      "comment": "",
-      "id": 503
-    },
-    {
-      "id": 504,
-      "movieId": "5",
-      "userId": 1000,
-      "rating": 2,
-      "comment": "jnvjs"
+      "comment": "very bad"
     }
   ]
 }

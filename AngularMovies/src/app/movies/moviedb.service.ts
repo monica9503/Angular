@@ -33,4 +33,10 @@ export class MovieDBService extends ApiService {
         const currURL = this.url + 'movieinfo';
         return this.http.post<any>(currURL, data);
     }
+
+    removeMovie(movieId: number) {
+        debugger
+        const currURL = this.url + 'movies/' + movieId;
+        return this.http.delete<any>(currURL);
+    }
 }

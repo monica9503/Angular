@@ -2,19 +2,19 @@
     {
         "userId": 1000,
         "userName": "monica",
-        "isAdmin": false,
+        "isAdmin": "false",
         "password": "cy3"
     },
     {
         "userId": 1001,
         "userName": "chandni",
-        "isAdmin": true,
+        "isAdmin": "true",
         "password": "qqqq"
     },
     {
         "userId": 1002,
         "userName": "xyz",
-        "isAdmin": false,
+        "isAdmin": "false",
         "password": "aaa"
     }
 ]
