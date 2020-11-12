@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 
 export class MoviesComponent implements OnInit {
   moviesData: Movie[]
+  searchInput = '';
   
   constructor(private router: Router, private movieDBService: MovieDBService) { }
 

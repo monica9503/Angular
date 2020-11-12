@@ -25,16 +25,12 @@ export class MovieDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private movieService: MovieDBService, private router: Router) { }
 
   ngOnInit(): void {
-    debugger
     this.route.paramMap.subscribe(params => {
-      debugger
       this.movieID = params.get("id");
       const movieGenericDetail = this.movieService.getMovieSpecific(parseInt(this.movieID));
       const movieInfo = this.movieService.getMovieInfo(parseInt(this.movieID));
 
-      debugger
       forkJoin([movieGenericDetail, movieInfo]).subscribe(result => {
-        debugger
         this.movieInfo = result[0];
         const userId = parseInt(localStorage.getItem("userId"));
         if(result[1][0] === undefined) {
@@ -65,7 +61,7 @@ export class MovieDetailsComponent implements OnInit {
     const rating = detailsForm.controls.userrating.value;
     const comment = detailsForm.controls.usercomment.value;
 
-    const dataInput = {"id": movieInfoId, "movieId": movieId, "userId": userId, "rating": parseInt(rating), "comment": comment}
+    const dataInput = {"id": movieInfoId, "movieId": parseInt(movieId), "userId": userId, "rating": parseInt(rating), "comment": comment}
 
     this.movieService.updateMovieInfo(movieInfoId, dataInput).subscribe(data => {
       this.router.navigate(['/movies']);
