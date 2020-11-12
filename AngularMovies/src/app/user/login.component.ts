@@ -19,8 +19,6 @@ export class LoginComponent {
               private router: Router,
               private httpClient: HttpClient) { }
 
-            
-  
   ngOnInit() {
     if(this.authService.isLoggedIn) {
       this.router.navigate(['/movies']);

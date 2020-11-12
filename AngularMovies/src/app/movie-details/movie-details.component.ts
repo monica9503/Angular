@@ -60,7 +60,6 @@ export class MovieDetailsComponent implements OnInit {
     const userId = parseInt(localStorage.getItem("userId"));
     const rating = detailsForm.controls.userrating.value;
     const comment = detailsForm.controls.usercomment.value;
-
     const dataInput = {"id": movieInfoId, "movieId": parseInt(movieId), "userId": userId, "rating": parseInt(rating), "comment": comment}
 
     this.movieService.updateMovieInfo(movieInfoId, dataInput).subscribe(data => {
