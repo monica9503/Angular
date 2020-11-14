@@ -32,8 +32,8 @@
                 </div>
                 <div class="form-group row">
                     <label class="col-md-2 col-form-label"
-                           for="userRating">My rating: </label>
-                    <input [disabled]="ratingFlag" type="text" id="userR" ngModel="{{userRating}}" #userR="ngModel" class="form-control col-md-2" name="userrating" value="{{userRating}}"/>
+                           for="userRating">My rating (0 - 5): </label>
+                    <input [disabled]="ratingFlag" type="number" min="0"  max="5" id="userR" ngModel="{{userRating}}" #userR="ngModel" class="form-control col-md-2" name="userrating" value="{{userRating}}"/>
                     <button
                     type="button"
                     class="btn btn-sm btn-outline-danger ml-2"

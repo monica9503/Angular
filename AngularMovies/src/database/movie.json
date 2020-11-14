@@ -3,20 +3,20 @@
     {
       "id": 1,
       "title": "Leaf Rake",
-      "description": "Leaf rake with 48-inch wooden handle",
-      "avgRating": 17
+      "descirption": "Leaf rake with 48-inch wooden handle",
+      "avgRating": 5
     },
     {
       "id": 2,
       "title": "Inception",
       "description": "Leaf rake with 48-inch wooden handle",
-      "avgRating": 7
+      "avgRating": 5
     },
     {
       "id": 3,
       "title": "Spider man",
-      "description": "Leaf rake with 48-inch wooden handle",
-      "avgRating": 5
+      "description": "seema",
+      "avgRating": 1
     },
     {
       "title": "dubakur",
@@ -35,15 +35,15 @@
     {
       "id": 500,
       "movieId": 1,
-      "rating": 3.2,
+      "rating": 4,
       "userId": 1000,
       "comment": "very good"
     },
     {
       "id": 501,
-      "movieId": 2,
-      "rating": 4.2,
-      "userId": 1000,
+      "movieId": 3,
+      "userId": 1009,
+      "rating": 2,
       "comment": "very bad"
     },
     {
@@ -52,6 +52,20 @@
       "rating": 0,
       "comment": "",
       "id": 502
+    },
+    {
+      "id": 503,
+      "movieId": 3,
+      "userId": 1000,
+      "rating": 0,
+      "comment": ""
+    },
+    {
+      "movieId": 3,
+      "userId": 1002,
+      "rating": 3,
+      "comment": "ajnvkj",
+      "id": 506
     }
   ]
 }

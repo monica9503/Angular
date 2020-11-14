@@ -44,4 +44,9 @@ export class MovieDBService extends ApiService {
         const currURL = this.url + 'movies';
         return this.http.post<any>(currURL, data);
     }
+
+    updateMovieAvgRating(movieId: number, data: any) {
+        const currURL = this.url + 'movies/' + movieId;
+        return this.http.put<any>(currURL, data);
+    }
 }
