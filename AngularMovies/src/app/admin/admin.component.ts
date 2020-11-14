@@ -31,7 +31,7 @@ export class AdminComponent implements OnInit {
   }
 
   addMovie() {
-    
+    this.router.navigateByUrl('/admin/addmovie');
   }
 
 }

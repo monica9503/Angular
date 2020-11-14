@@ -6,6 +6,7 @@ import { AuthGuard } from './user/auth.guard';
 import { UserGuard } from '../app/user/user.guard';
 import { LoginComponent } from './user/login.component';
 import { AdminComponent } from './admin/admin.component';
+import { AddMovieComponent } from './add-movie/add-movie.component';
 
 const routes: Routes = [];
 
@@ -22,6 +23,9 @@ const routes: Routes = [];
     { path: 'movie/details/:id', component: MovieDetailsComponent },
     {
       path: 'admin', component: AdminComponent
+    },
+    {
+      path: 'admin/addmovie', component: AddMovieComponent
     }
    ], {})
   ],
