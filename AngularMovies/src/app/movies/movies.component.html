@@ -4,7 +4,10 @@
     </div>
   
     <input type="text" class="searchBtn" [(ngModel)]="searchInput" placeholder="search..." name="search"/>
-    <ul *ngFor="let row of moviesData | filter: searchInput" class="mt-3">
-        <span (click)="movieDetails(row)" class="cp">{{row.title}}</span>
-    </ul>
+    <div class="scr">
+        <ul *ngFor="let row of moviesData | filter: searchInput" class="mt-3">
+            <span (click)="movieDetails(row)" class="cp">{{row.title}}</span>
+        </ul>
+    </div>
+    
 </div>
