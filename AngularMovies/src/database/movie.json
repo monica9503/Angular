@@ -2,91 +2,91 @@
   "movies": [
     {
       "id": 1,
-      "title": "Leaf Rake",
-      "descirption": "Leaf rake with 48-inch wooden handle",
+      "title": "Avengers End Game",
+      "descirption": "Avengers Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures",
       "avgRating": 5
     },
     {
       "id": 2,
       "title": "Inception",
-      "description": "Leaf rake with 48-inch wooden handle",
+      "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO",
       "avgRating": 5
     },
     {
       "id": 3,
       "title": "Spider man",
-      "description": "seema",
+      "description": "Spider-Man is a fictional superhero created by writer-editor Stan Lee and writer-artist Steve Ditko",
       "avgRating": 1
     },
     {
-      "title": "dubakur",
-      "description": "seema",
+      "title": "Fast and Furious",
+      "description": "Fast & Furious is a media franchise centered on a series of action films that are largely concerned with illegal street racing, heists and spies",
       "avgRating": 0,
       "id": 5
     },
     {
-      "title": "vikram",
-      "description": "kamal new moview",
+      "title": "Now You See Me",
+      "description": "Charismatic magician Atlas, Jesse Eisenberg leads a team of talented illusionists called the Four Horsemen",
       "avgRating": 0,
       "id": 6
     },
     {
       "id": 11,
-      "title": "Leaf Rake part 2",
-      "descirption": "Leaf rake with 48-inch wooden handle",
+      "title": "The Conjuring",
+      "descirption": "The Conjuring is a 2013 American supernatural horror film directed by James Wan and written by Chad Hayes",
       "avgRating": 5
     },
     {
       "id": 12,
-      "title": "Inception part 2",
-      "description": "Leaf rake with 48-inch wooden handle",
+      "title": "Frozen",
+      "description": "When their kingdom becomes trapped in perpetual winter, fearless Anna joins forces with mountaineer Kristoff and his reindeer sidekick to find Anna's sister Snow Queen Elsa  and break her icy spell",
       "avgRating": 5
     },
     {
       "id": 13,
       "title": "Spider man part 2",
-      "description": "seema",
+      "description": "Peter Parker is beset with troubles in his failing personal life as he battles a brilliant scientist named Doctor Otto Octavius",
       "avgRating": 1
     },
     {
-      "title": "dubakur part 2",
-      "description": "seema",
+      "title": "Jumanji",
+      "description": "Jumanji is a 1995 American fantasy adventure film directed by Joe Johnston",
       "avgRating": 0,
       "id": 15
     },
     {
-      "title": "vikram part 2",
-      "description": "kamal new moview",
+      "title": "Twilight",
+      "description": "High-school student Bella Swan always a bit of a misfit does not expect life to change much when she moves from sunny Arizona to rainy Washington state",
       "avgRating": 0,
       "id": 16
     },
     {
       "id": 21,
-      "title": "Leaf Rake part 3",
-      "descirption": "Leaf rake with 48-inch wooden handle",
+      "title": "Interstellar",
+      "descirption": "Interstellar is a 2014 epic science fiction film directed and produced by Christopher Nolan",
       "avgRating": 5
     },
     {
       "id": 22,
-      "title": "Inception part 3",
-      "description": "Leaf rake with 48-inch wooden handle",
+      "title": "Joker",
+      "description": "Joker is a 2019 American psychological thriller film directed and produced by Todd Phillips who co wrote the screenplay with Scott Silver",
       "avgRating": 5
     },
     {
       "id": 23,
-      "title": "Spider man part 3",
-      "description": "seema",
+      "title": "The Dark Knight",
+      "description": "With the help of allies Lt Jim Gordon and DA Harvey Dent and Batman has been able to keep a tight lid on crime in Gotham City",
       "avgRating": 1
     },
     {
-      "title": "dubakur part 3",
-      "description": "seema",
+      "title": "Minions",
+      "description": "Evolving from single celled yellow organisms at the dawn of time Minions live to serve but find themselves working for a continual series of unsuccessful masters from T Rex to Napoleon",
       "avgRating": 0,
       "id": 25
     },
     {
-      "title": "vikram part 3",
-      "description": "kamal new moview",
+      "title": "Jurassic World",
+      "description": "Located off the coast of Costa Rica the Jurassic World luxury resort provides a habitat for an array of genetically engineered dinosaurs including the vicious and intelligent Indominus rex",
       "avgRating": 0,
       "id": 26
     }
